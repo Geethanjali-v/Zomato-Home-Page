@@ -1,0 +1,531 @@
+#header {
+    width: 100%;
+    height: 60px;
+    background-color: tomato
+}
+
+h1 {
+    color: white
+}
+
+#icon {
+    float: left
+}
+
+#social {
+    float: right
+}
+
+.fa-brands {
+    margin: 5px;
+    font-size: 50px;
+}
+
+#search {
+    width: 100%;
+    height: 600px;
+    background-image: url(../Zomato\ home\ page/main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../Zomato\ home\ page/main.png);
+    opacity: 1;
+}
+
+#logo {
+    font-size: 90px;
+    width: 150px;
+    height: 150px;
+    margin-left: 46%;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 5%;
+}
+
+#logo>span {
+    margin-left: 25%;
+    color: red;
+
+}
+
+#heading {
+    margin-top: 18%;
+    position: absolute;
+    margin-left: 23%;
+    font: normal normal 600 36px/55px poppins;
+    color: white;
+}
+
+#dropdown {
+    width: 40%;
+    height: 50px;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 25%;
+
+}
+
+select {
+    height: 50px;
+    width: 40%;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* #select-style {
+    width: 59%
+    
+} */
+
+#quickSearch {
+    width: 80%;
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+#quickHeading {
+    margin-left: 2%;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #192F60;
+    display: block;
+}
+
+#quickHeading:hover {
+    font-size: 50px;
+}
+
+#quicksubHeading {
+    text-align: left;
+    color: #8C96AB;
+    font-size: 18px;
+    margin-left: 2%;
+}
+
+.tileContainer1 {
+    float: left;
+    width: 35%;
+    height: 150px;
+    box-shadow: 5px 10px 15px rgb(70, 68, 68);
+    margin-left: 1%;
+    margin-top: 5%;
+}
+
+
+.tileItem1 {
+    float: left;
+    width: 60%;
+    
+}
+
+.tileItem1>img {
+    width: 150px;
+    height: 150px;
+}
+
+.tileItem2 {
+    float: left;
+    width: 10%;
+    margin-left: 55%;
+    margin-top: -40%;
+}
+
+.tileheading {
+    font-size: 20px;
+    color: #192F60;
+}
+
+.tilesubHeading {
+    font-size: 16px;
+    float: left;
+    margin-left: 55%;
+    margin-top: -25%;
+}
+.tileContainer2 {
+    float: left;
+    width: 35%;
+    height: 150px;
+    box-shadow: 5px 10px 15px rgb(70, 68, 68);
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+.tileItem3 {
+    float: left;
+    width: 60%;
+    
+}
+
+.tileItem3>img {
+    width: 150px;
+    height: 150px
+}
+
+.tileItem4 {
+    float: left;
+    width: 10%;
+    margin-left: 55%;
+    margin-top: -40%;
+}
+
+.tileheading1 {
+    font-size: 20px;
+    color: #192F60;
+}
+
+.tilesubHeading1 {
+    font-size: 16px;
+    float: left;
+    margin-left: 55%;
+    margin-top: -25%;
+}
+.tileContainer3 {
+    float: left;
+    width: 35%;
+    height: 150px;
+    box-shadow: 5px 10px 15px rgb(70, 68, 68);
+    margin-left: 82%;
+    margin-top: -15.5%;
+}
+
+
+.tileItem5 {
+    float: left;
+    width: 60%;
+    
+}
+
+.tileItem5>img {
+    width: 150px;
+    height: 150px
+}
+
+.tileItem6 {
+    float: left;
+    width: 10%;
+    margin-left: 55%;
+    margin-top: -40%;
+}
+
+.tileheading2 {
+    font-size: 20px;
+    color: #192F60;
+}
+
+.tilesubHeading2 {
+    font-size: 16px;
+    float: left;
+    margin-left: 55%;
+    margin-top: -25%;
+}
+.tileContainer4 {
+    float: left;
+    width: 35%;
+    height: 150px;
+    box-shadow: 5px 10px 15px rgb(70, 68, 68);
+    margin-left: 1%;
+    margin-top: 5%;
+}
+
+
+.tileItem7 {
+    float: left;
+    width: 60%;
+    
+}
+
+.tileItem7>img {
+    width: 150px;
+    height: 150px
+}
+
+.tileItem8 {
+    float: left;
+    width: 10%;
+    margin-left: 55%;
+    margin-top: -40%;
+}
+
+.tileheading3 {
+    font-size: 20px;
+    color: #192F60;
+}
+
+.tilesubHeading3 {
+    font-size: 16px;
+    float: left;
+    margin-left: 55%;
+    margin-top: -25%;
+}
+.tileContainer5 {
+    float: left;
+    width: 35%;
+    height: 150px;
+    box-shadow: 5px 10px 15px rgb(70, 68, 68);
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+.tileItem9 {
+    float: left;
+    width: 60%;
+    
+}
+
+.tileItem9>img {
+    width: 150px;
+    height: 150px
+}
+
+.tileItem10 {
+    float: left;
+    width: 10%;
+    margin-left: 55%;
+    margin-top: -40%;
+}
+
+.tileheading4 {
+    font-size: 20px;
+    color: #192F60;
+}
+
+.tilesubHeading4 {
+    font-size: 16px;
+    float: left;
+    margin-left: 55%;
+    margin-top: -25%;
+}
+.tileContainer6 {
+    float: left;
+    width: 35%;
+    height: 150px;
+    box-shadow: 5px 10px 15px rgb(70, 68, 68);
+    margin-left: 82%;
+    margin-top: -15.5%;
+}
+
+
+.tileItem11 {
+    float: left;
+    width: 60%;
+    
+}
+
+.tileItem11>img {
+    width: 150px;
+    height: 150px
+}
+
+.tileItem12 {
+    float: left;
+    width: 10%;
+    margin-left: 55%;
+    margin-top: -40%;
+}
+
+.tileheading5 {
+    font-size: 20px;
+    color: #192F60;
+}
+
+.tilesubHeading5 {
+    font-size: 16px;
+    float: left;
+    margin-left: 55%;
+    margin-top: -25%;
+}
+
+
+
+/* Footer */
+
+footer {
+    height: 150px;
+    text-align: center;
+    background-color: #3b2632;
+    color: #fff
+}
+
+ul {
+    list-style: none
+}
+
+.fotDiv {
+    width: 30%;
+    float: left;
+    border-right: 2px solid white
+}
+
+.noborder {
+    border: none;
+}
+
+#fotsocial {
+    float: right;
+    margin-top: -4%;
+
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+ {
+    .tileContainer1,.tileContainer2,.tileContainer3,.tileContainer4,.tileContainer5,.tileContainer6 {
+        width:100%;
+        margin-left: 2%;
+        margin-top: 5%;
+        }
+     .fa-brands {
+            margin: 5px;
+            font-size: 30px;
+        }
+     #logo {
+            font-size: 40px;
+            width: 70px;
+            height: 70px;
+            margin-left: 40%;
+            
+        }
+        #heading {
+    margin-top: 25%;
+            margin-left: 12%;
+            font: normal normal 600 25px/45px poppins;
+           
+        }
+        #dropdown {
+            width: 90%;
+            margin-left: 23%;
+            margin-top: 50%;
+        
+        }
+        select {
+            height: 35px;
+            width: 60%;
+            font-size: 15px;
+            text-align: center;
+        }
+        #search {
+            width: 110%;
+            height: 350px;
+        
+        }
+        #quickHeading:hover {
+            font-size: 25px;
+        }
+        
+        }  
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)
+{
+   .tileContainer1,.tileContainer2,.tileContainer3,.tileContainer4,.tileContainer5,.tileContainer6 {
+       width:100%;
+       margin-left: 2%;
+       margin-top: 5%;
+       }
+       .tileheading,.tileheading1,.tileheading2,.tileheading3,.tileheading4,.tileheading5{
+        margin-left: -200%;
+        margin-top: 170%;
+       }
+
+.tilesubHeading,.tilesubHeading1,.tilesubHeading2,.tilesubHeading3,.tilesubHeading4,.tilesubHeading5 {
+    font-size: 16px;
+    float: left;
+    margin-left: 35%;
+    margin-top: -15%;
+}   
+    .fa-brands {
+           margin: 10px;
+           font-size: 30px;
+       }
+    #logo {
+           font-size: 40px;
+           width: 70px;
+           height: 70px;
+           margin-left: 40%;
+           
+       }
+       #heading {
+           margin-top: 20%;
+           margin-left: 12%;
+           font: normal normal 600 25px/45px poppins;
+          
+       }
+       #dropdown {
+           width: 50%;
+           margin-left: 35%;
+           margin-top: 30%;
+       
+       }
+       select {
+           height: 30px;
+           width: 60%;
+           font-size: 15px;
+           text-align: center;
+       }
+       #search {
+           width: 100%;
+           height: 350px;
+       }
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+    .tileContainer1,.tileContainer2,.tileContainer3,.tileContainer4,.tileContainer5,.tileContainer6 {
+        width:30%;
+        margin-left: 3%;
+        margin-top: 5%;
+        }
+        .tileheading,.tileheading1,.tileheading2,.tileheading3,.tileheading4,.tileheading5{
+         margin-left: 10%;
+         margin-top: -20%;
+        }
+ 
+ .tilesubHeading,.tilesubHeading1,.tilesubHeading2,.tilesubHeading3,.tilesubHeading4,.tilesubHeading5 {
+     font-size: 16px;
+     float: left;
+     margin-left: 55%;
+     margin-top: -30%;
+ }   
+     .fa-brands {
+            margin: 10px;
+            font-size: 50px;
+        }
+     #logo {
+            font-size: 90px;
+            width: 150px;
+            height: 150px;
+            margin-left: 40%;
+            
+        }
+        #heading {
+            margin-top: 20%;
+            margin-left: 20%;
+            font: normal normal 600 45px/45px poppins;
+           
+        }
+        #dropdown {
+            width: 30%;
+            margin-left: 30%;
+            margin-top: 25%;
+           
+            
+        }
+        select {
+            height: 50px;
+            width: 60%;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #select-style {
+            width: 55%;
+            margin-left: 5%;
+            position: absolute;
+        }
+        #search {
+            width: 100%;
+            height: 500px;
+           
+        }  
+}
