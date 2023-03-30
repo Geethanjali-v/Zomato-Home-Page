@@ -1,0 +1,358 @@
+install
+---------
+
+https://code.visualstudio.com/download - vs code install
+https://github.com/ - github - create account
+https://nodejs.org/en/ - install
+https://git-scm.com/downloads - install
+https://github.com/SangeethaShanmugm?tab=repositories  - follow
+https://www.linkedin.com/ - linkedin - create account
+https://www.netlify.com/ - create account(using github)
+
+
+
+To set your global username/email configuration:
+Open the command line.
+Set your username: git config --global user.name "FIRST_NAME LAST_NAME"
+Set your email address: git config --global user.email "MY_NAME@example.com"
+
+
+vs code extension
+------------------
+
+spell check
+eslint
+gitlens
+githistory
+vscode-icons
+live server - must
+Tabnine
+
+skills
+--------
+
+Frontend - 1 (website)
+----------------------
+HTML - raw structure - static
+CSS - look and feel(Design) - static
+Bootstrap
+Javascript - dynamic
+
+Frontend - 2 (web apps)
+------------------------
+React 
+
+Backend
+--------
+Node js
+mongodb
+
+MERN - mongodb express react nodejs
+MEAN - mongodb express angular nodejs
+
+framework & library
+angular & react
+
+
+HTML
+--------
+
+shift + 1 => html template 
+
+heading tags
+--------------
+
+h1 --- h6
+opening -----closing
+<tagname>content</tagname>
+element
+
+
+html structure
+-------------
+
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h1>Heading </h1>
+<p>paragraph</p>
+</body>
+</html>
+
+
+
+excellent  - counted
+good , average, bad - negative feedback
+
+tue, thu - 7 - 8pm
+
+
+Formatting tags
+-----------------
+<b> - bold text
+<strong> - important text 
+<i>  - italic
+<em> - emphasized text
+<small> - smaller text
+<sub>  - subscripted 
+<sup> - superscripted
+<del> - deleted text
+<mark> - highlight
+
+Block Level
+------------
+> starts with new line 
+> Take whole width of screen
+> Eg - p div section hr
+
+Inline Level
+-------------
+> start in the same line
+> Only take space which is required
+> Eg span img a
+
+
+CSS - Cascading Style sheet
+------------------------------
+
+3 ways to define CSS
+--------------------------
+1. inline - style="color: white;  text-align: center; background-color: dodgerblue ;" => style attribute inside HTML element
+2. Internal Styling  - <style> element in <head> tag
+<style>
+body{
+    background-color: "red";
+    }
+    h1{
+        color: "green"
+    }
+</style>
+3. External CSS - <link> element to link external css file
+ <link rel="stylesheet" href="style.css">
+
+
+
+<!-- display - none, block  --> - will not occupy space
+<!-- visibility - none, hidden --> It will occupy the space
+
+display: none and visibility: hidden difference?
+--------------------------------------------------
+
+display: none - will not occupy space
+visibility: hidden -  will occupy the space
+
+
+display: block - text will be visible
+visibility: none - text will be visible
+
+CSS Selector
+-------------
+
+class - .(dot) - group of element
+id  = #(hash)  -  unique element
+
+
+Post Form data
+--------------
+1. form -> add method and action
+2. create data.json - add the below
+{
+    "employee" : []
+}
+3. copy and paste in terminal - npx json-server --watch data.json --port 7600
+
+JSON -> Javascript object notation - [{ "key": "value"},{ "key": "value"}]
+object - { key: "value"}
+array - [1,2,3,5,] 
+
+
+Grid 
+-----
+Two dimensional layout - both rows and columns
+
+Flex
+-----
+
+One dimensional layout - either rows or columns
+
+Bootstrap
+-------------
+
+Bootstrap is a frontend framework - easy and faster
+templates - forms, button, cards, media, table, image carousals
+
+Advantages
+-----------
+Easy to use
+Responsive
+Mobile-first approach
+Browser compatibility
+
+
+CDN 
+----
+
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+   container - element with contents - fixed width container
+   container-fluid - full width container
+
+mr - margin right
+mt -margin top
+mb - margin bottom
+ml - margin left
+
+
+Bootstrap3
+-------------
+
+768px < xs
+768px > sm
+992px > md
+1200px >lg
+
+Bootstrap4
+-----------
+
+576px < col-
+576px > sm
+768px > md
+992px > lg
+1200px > xl
+
+Bootstrap5
+------------
+576px < col-
+576px > sm
+768px > md
+992px > lg
+1200px > xl
+1400px > xxl
+
+
+
+Bootstrap font icon
+----------------------
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+Javascript
+-------------
+Ecma script5
+Ecma script6
+es5
+es6
+
+string + string  = string
+string + number  = string
+number + string = string
+number + number = number
+
+json - javascript object notation
+"key" : "value"
+
+object =>  json  => prettier-code formatter extension
+right click => format doc with -> prettier - we get json structure
+
+callback function - func inside another func
+
+API call
+----------
+OpenWeather API
+
+https://api.openweathermap.org/data/2.5/forecast/daily?lat=10.9820963&lon=76.9988557&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29
+
+https://api.openweathermap.org/data/2.5/weather?lat=28.6107926&lon=77.3106997&appid=a764710199b4aa019c290680e78b0bf3
+
+
+Hoisting - is a behaviour in which a func or var can be accessed / used before declaration
+
+
+Node js
+----------
+
+Single Threaded Asynchronous Non Block input/output
+
+Node Js does not require ay Server to compile
+
+NodeJs Inbuilt Packages
+>> File System
+>> Operating System
+>> HTTP
+
+
+Package.json
+------------
+
+> starting point to the app
+> it contains all the package we require
+> it also contains the script to run the app
+> Meta Data(description about the app)
+
+
+Steps to generate package.json
+-------------------------------
+
+> Node js must be installed in laptop
+> Go inside the folder where you want the node app / go inside folder using cmd
+> npm init   => initialization
+> Answer all the question - just click enter
+> Type "yes"
+
+
+mongodb
+-----------
+
+cmd -
+1. mongo --version 
+2. mongo  - open shell
+3. mongod - to kickstart mongo server
+
+
+
+show dbs - show all dbs in mongodb
+use dbName - switch to dbName
+db - currently/lastly which db you have worked
+
+
+
+2 types of dbs
+-----------
+
+relational database - mySQl, SQl, oracle- table =>  coluns & rows
+non relational database - mongodb, couch db, graphql, postgres 
+
+mongodb -  bson structure
+
+obj =>  {k: "v"}
+
+json  => {"k":"v"}
+
+bson- binary json
+mongodb store data in bson format but retrieve in json format
+
+Schema -  structure of data or blueprint of data 
+[
+{
+    name:"peter",
+    age:20
+},
+{
+    name:"jack",
+    age:25,
+    score: 90,
+},
+]
+
+replaceOne(name:"peter)
+
+object - document
+table - collection
