@@ -1,10 +1,14 @@
 const express = require("express");
 const mongo =  require("mongodb");
 const MongoClient = mongo.MongoClient;
+const bodyParser = require ("body-parser");
 const app = express();
 const PORT = 4002;
 const MONGO_URL = "mongodb://127.0.0.1:27017";
 let db;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 //REST API endpoints
 app.get("/", function(req,res) {
@@ -46,21 +50,130 @@ query = {state_id: stateId};
   });
 
   //filter
-app.get("/filter/:mealId", function (req, res){
-  let query = {};
+  app.get("/filter/:mealId", function (req, res) {
+    let query = {};
+    let sort = { cost: 1 };
     let mealId = Number(req.params.mealId);
-    let cuisineId = Number(req.params.cuisineId);
-    if(cuisineId){
+    let cuisineId = Number(req.query.cuisineId);
+    let lcost = Number(req.query.lcost);
+    let hcost = Number(req.query.hcost);
+    if (req.query.sort) {
+      sort = { cost: req.query.sort };
+    }
+  
+    if (cuisineId) {
       query = {
         "mealTypes.mealtype_id": mealId,
         "cuisines.cuisine_id": cuisineId,
       };
+    } else if (lcost && hcost) {
+      query = {
+        "mealTypes.mealtype_id": mealId,
+        $and: [{ cost: { $gt: lcost, $lt: hcost } }],
+      };
+    } else if (cuisineId && lcost && hcost) {
+      query = {
+        "mealTypes.mealtype_id": mealId,
+        "cuisines.cuisine_id": cuisineId,
+        $and: [{ cost: { $gt: lcost, $lt: hcost } }],
+      };
     }
-  db.collection("zomato").find(query).toArray((err,result) => {
-  if(err) throw err;
-  res.send(result);
+    db.collection("zomato")
+      .find(query)
+      .sort(sort)
+      .toArray((err, result) => {
+        if (err) throw err;
+        res.send(result);
+      });
+  });
+
+ //meals details for restaurant
+app.get("/menu/:id", function(req, res) {
+  let id = Number(req.params.id);
+  db.collection("menu").find({ restaurant_id : id}).toArray((err, result) => {
+    if(err) throw err;
+    res.send(result);
+    });
+    });
+
+  //restaurant details
+app.get("/details/:id", function(req, res) {
+  // let id = mongo.ObjectId(req.params.id)
+  let id = Number(req.params.id);
+  db.collection("zomato").find({restaurant_id : id}).toArray((err, result) => {
+    if(err) throw err;
+    res.send(result);
+    });
+    });
+
+    //menu details
+    app.post("/menuItem", function (req, res) {
+      if (Array.isArray(req.body.id)) {
+        db.collection("menu")
+          .find({ menu_id: { $in: req.body.id } })
+          .toArray((err, result) => {
+            if (err) throw err;
+            res.send(result);
+          });
+      } else {
+        res.send("Invalid input");
+      }
+    });
+    
+    
+//place order
+app.post("/placeorder", function (req, res) {
+  console.log(req.body);
+  db.collection("orders").insert(req.body, (err, result) => {
+    if (err) throw err;
+    res.send("Order Placed");
   });
 });
+
+//list of orders
+
+app.get("/orders", function (req, res) {
+  let query = {};
+  let email = req.query.email;
+  if (email) {
+    query = { email };
+  }
+  db.collection("orders")
+    .find(query)
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+});
+
+//update order
+
+app.put("/updateOrder/:id", function (req, res) {
+  let oid = Number(req.params.id);
+  db.collection("orders").updateOne(
+    { orderId: oid },
+    {
+      $set: {
+        status: req.body.status,
+        bank_name: req.body.bank_name,
+        date: req.body.date,
+      },
+    },
+    (err, result) => {
+      if (err) throw err;
+      res.send("Order updated");
+    }
+  );
+});
+
+//deleting orders
+app.delete("/deleteOrder/:id", function (req, res) {
+  let _id = mongo.ObjectId(req.params.id);
+  db.collection("orders").deleteOne({_id}, (err, result) => {
+  if (err) throw err;
+  res.send("Order Deleted");
+  });
+  });
 
 // MongoDb connection
 MongoClient.connect(MONGO_URL, (err, client) => {
