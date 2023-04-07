@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./Home/Search.css";
 const lurl = "http://localhost:4002/locations";
-const rurl = "http://localhost:4002/restaurants?mealId=";
+const rurl = "http://localhost:4002/restaurants?stateId=1";
 class S extends Component {
     render() {
         return (
