@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import "./Home/Search.css";
 const lurl = "http://localhost:4002/locations";
 const rurl = "http://localhost:4002/restaurants?stateId=1";
-class S extends Component {
+export default class Search extends Component {
+  constructor() {
+    super();
+    this.state = {
+      location: "",
+      restaurants: "",
+    };
+  }
     render() {
         return (
             <div>
@@ -33,4 +40,17 @@ class S extends Component {
     }
 }
 
-export default S;
+//api calling on page load
+  componentDidMount() {
+    fetch(lurl, { method: "GET" })
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({ location: data });
+        console.log(data);
+      });
+    }
+    
+    
+
+
+

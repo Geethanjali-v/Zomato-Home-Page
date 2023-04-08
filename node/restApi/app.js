@@ -4,11 +4,17 @@ const MongoClient = mongo.MongoClient;
 const bodyParser = require ("body-parser");
 const app = express();
 const PORT = 4002;
+// const dotenv = require("dotenv");
+// dotenv.config();
+// var cors = require("cors");
+// app.use(cors());
 const MONGO_URL = "mongodb://127.0.0.1:27017";
 let db;
 
+//middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 
 //REST API endpoints
 app.get("/", function(req,res) {
