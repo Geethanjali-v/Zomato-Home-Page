@@ -7,19 +7,19 @@ class Footer extends Component {
              <footer>
         <hr />
         <h3>Copyright Developer 2023. All Rights Reserved</h3>
-        <div class="fotDiv">
+        <div className="fotDiv">
           <ul>
             <li>Home</li>
             <li>Orders</li>
           </ul>
         </div>
-        <div class="fotDiv">
+        <div className="fotDiv">
           <ul>
             <li>About Us</li>
             <li>Contact Us</li>
           </ul>
         </div>
-        <div class="fotDiv-noborder">
+        <div className="fotDiv-noborder">
           <ul>
             <li>Visit our website</li>
             <li>Links</li>

@@ -3,9 +3,11 @@ const mongo =  require("mongodb");
 const MongoClient = mongo.MongoClient;
 const bodyParser = require ("body-parser");
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4002;
 const dotenv = require("dotenv");
 dotenv.config();
+var cors = require('cors'); 
+app.use(cors());
 let db;
 
 //middleware

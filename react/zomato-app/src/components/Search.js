@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import "./Home/Search.css";
+
 const lurl = "http://localhost:4002/locations";
-const rurl = "http://localhost:4002/restaurants?stateId=1";
+const rurl = "http://localhost:4002/restaurants?stateId=";
 export default class Search extends Component {
   constructor() {
     super();
@@ -10,10 +11,41 @@ export default class Search extends Component {
       restaurants: "",
     };
   }
-    render() {
+  renderCity = (data) => {
+    if (data) {
+      return data.map((item) => {
         return (
-            <div>
-               <div id="search">
+          <option key={item._id} value={item.state_id}>
+            {item.state}
+          </option>
+        );
+      });
+    }
+  };
+
+  renderRest = (data) => {
+    if (data) {
+      return data.map((item) => {
+        return (
+          <option key={item._id} value={item.restaurant_id}>
+            {item.restaurant_name}
+          </option>
+        );
+      });
+    }
+  };
+  handleCity = (event) => {
+    const stateId = event.target.value;
+    fetch(`${rurl}${stateId}`, { method: "GET" })
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({ restaurants: data });
+        console.log(data);
+      });
+  };
+  render() {
+    return (
+      <div id="search">
         <div id="logo">
           <span>e!</span>
         </div>
@@ -21,26 +53,21 @@ export default class Search extends Component {
           <p>Find the best restaurants, cafés, and bars</p>
         </div>
         <div id="dropdown">
-          <select>
+          <select onChange={this.handleCity}>
             <option>Please type a location</option>
-            <option>Sarjapur Road, Bengaluru</option>
-            <option>HSR Layout, Bengaluru</option>
+            <option>----SELECT CITY----</option>
+            {this.renderCity(this.state.location)}
           </select>
           <select id="select-style">
-            <option>Select Restaurants</option>
-            <option>Empire restaurants</option>
-            <option>CreamStone</option>
-            <option>Punjabi Rasoi</option>
+            <option>----SELECT RESTAURANTS----</option>
+            {this.renderRest(this.state.restaurants)}
           </select>
         </div>
       </div>
+    );
+  }
 
-            </div>
-        );
-    }
-}
-
-//api calling on page load
+  //api calling on page load
   componentDidMount() {
     fetch(lurl, { method: "GET" })
       .then((res) => res.json())
@@ -48,7 +75,8 @@ export default class Search extends Component {
         this.setState({ location: data });
         console.log(data);
       });
-    }
+  }
+}
     
     
 
