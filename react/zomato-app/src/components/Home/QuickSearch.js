@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import "./Home/QuickSearch.css";
-import QuickDisplay from "./Home/QuickDisplay";
+import "./QuickSearch.css";
+import QuickDisplay from "./QuickDisplay";
 
 const qurl  = "http://localhost:4002/quickSearch";
 class QuickSearch extends Component {

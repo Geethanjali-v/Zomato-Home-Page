@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Home/Search.css";
+import "./Search.css";
 
 const lurl = "http://localhost:4002/locations";
 const rurl = "http://localhost:4002/restaurants?stateId=";
