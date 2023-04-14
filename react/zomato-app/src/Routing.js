@@ -3,7 +3,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import { Home } from "./Home";
 
-const Routing = () => {
+export const Routing = () => {
     return (
     <BrowserRouter>
     <div>
@@ -15,4 +15,4 @@ const Routing = () => {
     );
     };
     
-  export default Routing; 
+//   export default Routing; 
