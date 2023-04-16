@@ -13,7 +13,7 @@ let db;
 //middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-console.log(process.env);
+// console.log(process.env);
 const MONGO_URL = process.env.MONGO_URL;
 
 //REST API endpoints
@@ -27,7 +27,7 @@ app.get("/locations", function (req, res) {
 db.collection("locations").find().toArray((err,result) => {
 if(err) throw err;
 res.send(result);
-})
+});
 });
 
 //get mealType
@@ -92,7 +92,6 @@ query = {state_id: stateId};
         res.send(result);
       });
   });
-
  //meals details for restaurant
 app.get("/menu/:id", function(req, res) {
   let id = Number(req.params.id);
