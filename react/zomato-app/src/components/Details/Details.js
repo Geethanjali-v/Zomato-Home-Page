@@ -3,7 +3,7 @@ import axios from "axios";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "./details.css";
-import MenuList from "./MenuList";
+import {MenuList} from "./MenuList";
 import { Link } from "react-router-dom";
 import Header from "../../Header";
 const url = "http://localhost:4002";
@@ -75,6 +75,25 @@ export class Details extends Component {
               <p>Contact No. {details.contact_number}</p>
             </TabPanel>
           </Tabs>
+          <div>
+              <Link
+                to={`/listing/${this.state.mealId}`}
+                className="btn btn-danger"
+              >
+                BACK
+              </Link>
+              <button className="btn btn-success" onClick={this.proceed}>
+                Proceed
+              </button>
+            </div>
+            <div>
+              <MenuList
+                menuData={this.state.menuList}
+                finalOrder={(data) => {
+                  this.addToCart(data);
+                }}
+              />
+            </div>
         </div>
       </div>
     );

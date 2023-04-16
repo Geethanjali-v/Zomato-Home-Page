@@ -12,6 +12,9 @@ export class ListingApi extends Component {
           restaurantList: "",
         };
       }
+      setDataFilter = (data) => {
+        this.setState({ restaurantList: data });
+      };
     render() {
         return (
             <div>
