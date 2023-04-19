@@ -24,5 +24,5 @@
 }
 
 ## User Info
-(POST) http://localhost:5000/api/auth/userInfo
+(GET) http://localhost:5000/api/auth/userInfo
 (Header) => {'x-access-token': 'token value from login }

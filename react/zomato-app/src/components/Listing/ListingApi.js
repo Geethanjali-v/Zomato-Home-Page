@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import "./Listing.css";
+import Header from "../../Header";
 import {ListingDisplay} from "./ListingDisplay"
 import {CostFilter} from "../Filter/CostFilter"
 import {CuisineFilter} from "../Filter/CuisineFilter"
@@ -18,6 +19,7 @@ export class ListingApi extends Component {
     render() {
         return (
             <div>
+              <Header/>
                 <div className="row">
           <div id="mainListing">
             <div id="filter">

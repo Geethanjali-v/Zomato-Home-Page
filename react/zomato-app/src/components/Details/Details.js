@@ -29,6 +29,7 @@ export class Details extends Component {
   render() {
     let { details } = this.state;
     return (
+      <> <Header/>
       <div id="mainContent">
         <div className="ImgDiv">
           <img src={details.restaurant_thumb} alt="rest-pic" />
@@ -96,6 +97,7 @@ export class Details extends Component {
             </div>
         </div>
       </div>
+   </>
     );
   }
 
