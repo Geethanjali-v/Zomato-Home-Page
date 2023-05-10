@@ -53,7 +53,7 @@ export default class PlaceOrder extends Component {
   render() {
     return (
       <>
-        <Header />
+        {/* <Header /> */}
         <div className="container">
           <div className="panel panel-primary">
             <div className="panel-heading">

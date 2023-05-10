@@ -4,7 +4,7 @@ import Header from "../../Header";
 export const Home =() => {
 return(
     <>
-    <Header/>
+    {/* <Header/> */}
     <Search/>
     <QuickSearch/>
     </>

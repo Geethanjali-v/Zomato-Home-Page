@@ -41,7 +41,7 @@ class Login extends Component {
   render() {
     return (
       <>
-        <Header />
+        {/* <Header /> */}
         <div className="container">
           <div className="panel panel-warning">
             <div className="panel-heading">

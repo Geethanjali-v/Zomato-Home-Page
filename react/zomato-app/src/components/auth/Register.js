@@ -33,7 +33,7 @@ class Register extends Component {
   render() {
     return (
       <>
-        <Header />
+        {/* <Header /> */}
         <div className="container">
           <div className="panel panel-info">
             <div className="panel-heading">

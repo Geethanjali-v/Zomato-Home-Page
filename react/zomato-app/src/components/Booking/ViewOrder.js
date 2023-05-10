@@ -16,7 +16,7 @@ export default class ViewOrder extends Component {
   render() {
     return (
       <div>
-        <Header />
+        {/* <Header /> */}
         <OrderDisplay orderData={this.state.orders}/>
       </div>
     );
