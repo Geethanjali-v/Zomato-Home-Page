@@ -12,7 +12,7 @@ export const Routing = () => {
     return (
     <BrowserRouter>
     <div>
-        <Header/>
+        {/* <Header/> */}
 <Route exact path="/" component={Home} />
 <Route path="/listing/:mealId" component={ListingApi} />
 <Route path="/details" component={Details} />

@@ -14,6 +14,7 @@ export class Details extends Component {
       details: "",
       menuList: "",
       mealId: sessionStorage.getItem("mealId"),
+      userItem: "",
     };
   }
   addToCart = (data) => {

@@ -113,9 +113,9 @@ app.get("/details/:id", function(req, res) {
 
     //menu details
     app.post("/menuItem", function (req, res) {
-      if (Array.isArray(req.body.id)) {
+      if (Array.isArray(req.body)) {
         db.collection("menu")
-          .find({ menu_id: { $in: req.body.id } })
+          .find({ menu_id: { $in: req.body } })
           .toArray((err, result) => {
             if (err) throw err;
             res.send(result);
